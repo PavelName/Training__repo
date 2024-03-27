@@ -4,3 +4,4 @@ function cratrAlert (){
    console.log(all);
 };
 cratrAlert();
+console.log('Hi!')
