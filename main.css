@@ -30,7 +30,7 @@ body {
 }
 .btn {
     width: 70px;
-    color: brown;
+    color: rgb(65, 165, 42);
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid rgba(162, 11, 81, 0.531);
