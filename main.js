@@ -1,8 +1,8 @@
 "use strict";
 let a = 12;
-let b = 3;
-function summ ( x, y) {
+let b = 23;
+function summ ( x, y = 6) {
    const summNumb = x + y;
    return summNumb;
 };
-console.log(summ(a, b));
+console.log(summ(a, ));
