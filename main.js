@@ -1,18 +1,15 @@
-"use strict";
-// let title = 'Super project';
-// let screens = 'Simple,Complex,Interactive';
-// let screenPrice = 8;
-// let rollback = 93;
-// let fullPrice = 80000;
-// let adaptive = true;
+"use strict"
+let title = prompt('Как называется ваш проект?');
+let screens = prompt('Какие типы экранов нужно разработать?','Простые, Сложные, Интерактивные' );
 
+let screenPrice = +prompt('Сколько будет стоить данная работа?', 12000);
+let adaptive = confirm('Нужен ли адаптив на сайте?');
 
-// console.log(typeof title);
-// console.log(typeof fullPrice);
-// console.log(typeof adaptive);
-// console.log(screens.toLocaleLowerCase().split())
+let service1 = prompt('Какой дополнительный тип услуги нужен?');
+let servicePrice1 = +prompt('Сколько это будет стоить?');
+let service2 = prompt('Какой дополнительный тип услуги нужен?');
+let servicePrice2 = +prompt('Сколько это будет стоить?');
 
-// console.log(screens.length);
-// console.log(fullPrice * (rollback / 100));
-// console.log(`Стоимость верстки экранов ${screenPrice} рублей/ долларов/гривен/юани`);
-// console.log(`Стоимость разработки сайта ${fullPrice} рублей/ долларов/гривен/юани`);
+let fullPrice = (screenPrice + servicePrice1 + servicePrice2);
+console.log(fullPrice);
+let servicePercentPrice = 
