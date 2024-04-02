@@ -11,3 +11,24 @@ let firstTwoNumber = Number(String(count).slice(0, 2));
 console.log(firstTwoNumber);
 console.log(countSecond);
 console.log(count);
+
+let lang = 'en';
+
+let daysOfWeek = {
+    ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
+let results = daysOfWeek[lang].join('! ');
+
+console.log(results);
+
+let lan = 'ru';
+let ruWeeks = 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье';
+let enWeeks = 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday';
+ 
+if ( lan === 'ru') {
+  console.log(ruWeeks)
+} else if (lan === 'en') {
+  console.log(enWeeks);
+};
+
