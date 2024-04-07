@@ -32,3 +32,14 @@ if ( lan === 'ru') {
   console.log(enWeeks);
 };
 
+let lng = 'ru';
+switch (lng) {
+  case 'ru':
+    console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье.');
+  break;
+  case 'en':
+    console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+  break;
+  default:
+    console.log('Invalid langusges!');
+};
