@@ -12,7 +12,7 @@ let service2 = prompt('Какой дополнительный тип услуг
 let servicePrice2 = +prompt('Сколько это будет стоить?');
 
 let fullPrice = (screenPrice + servicePrice1 + servicePrice2);
-let servicePercentPrice = Math.ceil(fullPrice * (rollback / 100));
+let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * 0.5));
 
 
 if (fullPrice  >= 30000) {
@@ -28,10 +28,11 @@ if (fullPrice  >= 30000) {
 console.log(typeof title);
 console.log(typeof fullPrice);
 console.log(typeof adaptive);
+
 console.log(`Стоимость верстки экранов ${screenPrice} рублей/ долларов/гривен/юани`);
-console.log(`Стоимость разработки сайта ${fullPrice}  рублей/ долларов/гривен/юани `)
+console.log(`Стоимость разработки сайта ${fullPrice}  рублей/ долларов/гривен/юани `);
 
 console.log(screens.toLowerCase().split(','));
 console.log(screens.length);
 console.log(servicePercentPrice);
-console.log(fullPrice * (rollback / 100));
+
