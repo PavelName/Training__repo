@@ -12,7 +12,7 @@ let service2 = prompt('Какой дополнительный тип услуг
 let servicePrice2 = +prompt('Сколько это будет стоить?');
 
 let fullPrice = (screenPrice + servicePrice1 + servicePrice2);
-let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * 0.5));
+let servicePercentPrice = Math.ceil(fullPrice * (rollback / 100));
 
 
 if (fullPrice  >= 30000) {
