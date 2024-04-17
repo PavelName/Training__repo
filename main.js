@@ -6,10 +6,10 @@ let screenPrice = +prompt('Сколько будет стоить данная �
 let rollback = 15;
 let adaptive = confirm('Нужен ли адаптив на сайте?');
 
-let service1 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice1 = +prompt('Сколько это будет стоить?');
-let service2 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice2 = +prompt('Сколько это будет стоить?');
+let service1;
+let servicePrice1;
+let service2
+let servicePrice2;
 
 let fullPrice;
 let allServicePrices;
@@ -20,7 +20,18 @@ const chowTypeOf = function (varible){
   console.log(varible, typeof varible)
 };
 const getAllServicePrices = function() {
-  return screenPrice + servicePrice1 + servicePrice2;
+  let sum = 0;
+
+  for (let i = 0; i < 2; i++) {
+    if (sum === 0) {
+      service1 = prompt('Какой дополнительный тип услуги нужен?');
+    } else if (sum === 1) {
+      service2  = prompt('Какой дополнительный тип услуги нужен?');
+    }
+     sum += +prompt('Сколько это будет стоить?');
+    
+  }
+  return sum;
 };
 const getTitle = function() {
   return title.trim()[0].toUpperCase() + title.trim().substring(1).toLowerCase;
@@ -44,15 +55,18 @@ const getRoiibackMessage = function (price){
   };
 }
 
-chowTypeOf(title);
-chowTypeOf(fullPrice);
-chowTypeOf(adaptive);
 
-getTitle();
 
  allServicePrices = getAllServicePrices();
  fullPrice = getFullPrice();
  servicePercentPrice = getServicePercentPrices();
+ title = getTitle();
+
+
+chowTypeOf(title);
+chowTypeOf(fullPrice);
+chowTypeOf(adaptive);
+
 
 console.log(getRoiibackMessage(fullPrice));
 console.log(typeof title);
