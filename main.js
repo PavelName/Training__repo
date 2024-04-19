@@ -3,22 +3,36 @@ let title = prompt('Как называется ваш проект?');
 let screens = prompt('Какие типы экранов нужно разработать?','Простые, Сложные, Интерактивные' );
 
 let screenPrice = +prompt('Сколько будет стоить данная работа?', 12000);
-let rollback = 17;
+let rollback = 15;
 let adaptive = confirm('Нужен ли адаптив на сайте?');
 
-let service1;
 let servicePrice1;
-let service2
 let servicePrice2;
 
 let fullPrice;
 let allServicePrices;
-
 let servicePercentPrice;
+let service1;
+let service2;
 
-const chowTypeOf = function (varible){
-  console.log(varible, typeof varible)
+
+const isNumber = function (num) {
+
+ return !isNaN(parseFloat(num)) && isFinite(num);
 };
+
+const asking = function () {
+  title = prompt('Как называется ваш проект?');
+  screens = prompt('Какие типы экранов нужно разработать?','Простые, Сложные, Интерактивные' );
+
+
+  while (!isNumber(screenPrice)) {
+    screenPrice = prompt('Сколько будет стоить данная работа?');
+  }
+
+  screenPrice = prompt('Сколько будет стоить данная работа?');
+  adaptive = confirm('Нужен ли адаптив на сайте?');
+}
 const getAllServicePrices = function() {
   return screenPrice + servicePrice1 + servicePrice2;
 };
@@ -48,11 +62,17 @@ chowTypeOf(title);
 chowTypeOf(fullPrice);
 chowTypeOf(adaptive);
 
-getTitle();
 
  allServicePrices = getAllServicePrices();
  fullPrice = getFullPrice();
  servicePercentPrice = getServicePercentPrices();
+ title = getTitle();
+
+
+chowTypeOf(title);
+chowTypeOf(fullPrice);
+chowTypeOf(adaptive);
+
 
 console.log(getRoiibackMessage(fullPrice));
 console.log(typeof title);
